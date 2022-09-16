@@ -1,0 +1,19 @@
+type Employee {
+    empNo: ID
+    firstName: String
+    lastName: String
+    fullName: String
+    gender: String
+    titles: [Title]
+}
+
+type Title {
+    title: String
+    fromDate: String
+    toDate: String
+}
+
+type Query {
+    getEmployees: [Employee]
+    getEmployee(id: ID!): Employee
+}
